@@ -14,25 +14,22 @@ for simvol in stroka:
 print(max_dlina)
 """
 #36037
-"""
 max_dlina = 0
 tekushaya_dlina = 0
-indexCount = 0
-with open("36037.txt") as file:
+with open('36037.txt') as file:
     stroka = file.read()
-kolvoSimvolov = len(stroka)
-while indexCount < kolvoSimvolov:
-    if stroka[indexCount:indexCount+4] == "XZZY":
-        max_dlina = max(max_dlina, tekushaya_dlina)
+for i in range(len(stroka)):
+    if stroka[i:i+4] == "XZZY":
+        if tekushaya_dlina > max_dlina:
+            max_dlina = tekushaya_dlina
         tekushaya_dlina = 3
-        indexCount += 4
     else:
         tekushaya_dlina += 1
-        indexCount += 1
-max_dlina = max(max_dlina, tekushaya_dlina)
+if tekushaya_dlina > max_dlina:
+    max_dlina = tekushaya_dlina
 print(max_dlina)
-"""
 #46982
+"""
 count = 0
 index = 0
 with open("46982.txt") as file:
@@ -50,3 +47,4 @@ while index < len(text):
     else: 
         index += 1
 print(count)
+"""
