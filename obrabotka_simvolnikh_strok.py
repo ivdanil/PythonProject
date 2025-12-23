@@ -22,7 +22,7 @@ for i in range(len(stroka)):
     if stroka[i:i+4] == "XZZY":
         if tekushaya_dlina > max_dlina:
             max_dlina = tekushaya_dlina
-        tekushaya_dlina = 3
+        tekushaya_dlina = 0
     else:
         tekushaya_dlina += 1
 if tekushaya_dlina > max_dlina:
